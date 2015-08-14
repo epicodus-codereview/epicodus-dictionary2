@@ -16,3 +16,7 @@ get('/word_list') do
   @words = Word.all()
   erb(:word_list)
 end
+
+# get('/') do
+#
+# end
