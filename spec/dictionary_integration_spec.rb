@@ -39,3 +39,19 @@ describe('path to word list from success', {:type => :feature}) do
     expect(page).to have_content("Word List")
   end
 end
+
+describe("path to a specific word's definitions", {:type => :feature}) do
+  it('sends user to a list of definitions') do
+    visit('/word_list')
+    click_link("Aardvark")
+    expect(page).to have_content("Here are the definitions for this word:")
+  end
+end
+
+describe("path to add a definition to a word", {:type => :feature}) do
+  it('processes user entry and adds new definition') do
+    visit('/word_list/Aardvark')
+    click_link("Add a definition")
+    expect(page).to have_content("Add a definition to Aardvark")
+  end
+end

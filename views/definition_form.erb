@@ -1,0 +1,13 @@
+<h1>Add a definition to <%= @word.word() %></h1>
+
+<form action="/word_list/:word" method="post">
+  <input id="which_word" name="which_word" type="hidden" value="<%= @word.word() %>">
+
+
+  <input id="type" name="type" type="text" placeholder="noun/verb/adjective">
+
+
+  <input id="meaning" name="meaning" type="text" placeholder="Definition">
+
+  <button type="submit">Add Definition</button>
+</form>
