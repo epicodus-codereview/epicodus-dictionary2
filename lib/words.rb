@@ -25,4 +25,8 @@ class Word
   define_method(:definition) do
     @definition
   end
+
+  # define_method(:add_definition) do |def|
+  #   @definition.push(def)
+  # end
 end
