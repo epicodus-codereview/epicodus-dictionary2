@@ -43,12 +43,12 @@ describe(Word) do
     end
   end
 
-  # describe('#add_definition') do
-  #   it("adds a new definition to a word") do
-  #     test_word = Word.new("Aardvark")
-  #     test_definition = Definition.new("an animal")
-  #     test_word.add_definition(test_definition)
-  #     expect(test_word.definition()).to(eq([test_definition]))
-  #   end
-  # end
+  describe('#add_definition') do
+    it("adds a new definition to a word") do
+      test_word = Word.new("Aardvark")
+      test_definition = Definition.new("noun", "an animal")
+      test_word.add_definition(test_definition)
+      expect(test_word.definition()).to(eq([test_definition]))
+    end
+  end
 end
