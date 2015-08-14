@@ -43,6 +43,14 @@ describe(Word) do
     end
   end
 
+  describe('.find') do
+    it('returns a serched for word') do
+      test_word = Word.new("Aardvark")
+      test_word.save()
+      expect(Word.find("Aardvark")).to(eq(test_word))
+    end
+  end
+
   describe('#add_definition') do
     it("adds a new definition to a word") do
       test_word = Word.new("Aardvark")

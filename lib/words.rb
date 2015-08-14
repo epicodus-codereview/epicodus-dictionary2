@@ -29,4 +29,14 @@ class Word
   define_method(:add_definition) do |definition|
     @definition.push(definition)
   end
+
+  define_singleton_method(:find) do |word|
+    found_word = nil
+    @@words.each() do |verbum|
+      if verbum.word().eql?(word)
+        found_word = verbum
+      end
+    end
+    found_word
+  end
 end
