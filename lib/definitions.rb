@@ -1,5 +1,5 @@
 class Definition
-  @@definiton = []
+  @@definition = []
 
   define_method(:initialize) do |type, meaning|
     @meaning = meaning
@@ -12,5 +12,9 @@ class Definition
 
   define_method(:type) do
     @type
+  end
+
+  define_singleton_method(:all) do
+    @@definition
   end
 end
