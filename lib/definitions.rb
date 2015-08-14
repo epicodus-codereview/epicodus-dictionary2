@@ -9,4 +9,8 @@ class Definition
   define_method(:meaning) do
     @meaning
   end
+
+  define_method(:type) do
+    @type
+  end
 end

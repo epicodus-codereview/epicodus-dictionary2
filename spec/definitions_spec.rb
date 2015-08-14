@@ -13,4 +13,11 @@ describe(Definition) do
       expect(test_definition.meaning()).to(eq("an animal"))
     end
   end
+
+  describe('#type') do
+    it('returns the type of word') do
+      test_definition = Definition.new("noun", "an animal")
+      expect(test_definition.type()).to(eq("noun"))
+    end
+  end
 end
