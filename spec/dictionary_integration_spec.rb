@@ -29,3 +29,13 @@ describe('path for new word form', {:type => :feature}) do
     expect(page).to have_content("Success")
   end
 end
+
+describe('path to word list from success', {:type => :feature}) do
+  it('sends user to word list') do
+    visit('/word_list/new')
+    fill_in("word", :with => "Zyzzyva")
+    click_button('Add Word')
+    click_link('See Word List')
+    expect(page).to have_content("Word List")
+  end
+end

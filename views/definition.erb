@@ -1,0 +1,11 @@
+<h3>Here are the definitions for this word:</h3>
+
+<ul>
+  <% @word.definition().each() do |element| %>
+    <li><%= element.type() %>, <%= car.meaning() %></li>
+  <% end %>
+</ul>
+
+<a href="/word_list/<%= @word.word() %>/vehicles/new">Add another definition</a>
+<br>
+<a href="/">Return to Main Page</a>
