@@ -21,4 +21,8 @@ class Word
   define_singleton_method(:clear) do
     @@words = []
   end
+
+  define_method(:definition) do
+    @definition
+  end
 end

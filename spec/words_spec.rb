@@ -3,9 +3,9 @@ require('words')
 require('definitions')
 
 describe(Word) do
-  # before() do
-  #   Word.clear()
-  # end
+  before() do
+    Word.clear()
+  end
 
   describe('#word') do
     it('returns the given word') do
@@ -33,6 +33,13 @@ describe(Word) do
       Word.new("Aardvark").save()
       Word.clear()
       expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('#definition') do
+    it('initially returns an empty array of definitions') do
+      test_word = Word.new("Aardvark")
+      expect(test_word.definition()).to(eq([]))
     end
   end
 end
