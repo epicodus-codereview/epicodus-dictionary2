@@ -55,3 +55,13 @@ describe("path to add a definition to a word", {:type => :feature}) do
     expect(page).to have_content("Add a definition to Aardvark")
   end
 end
+
+describe('path for new definition form', {:type => :feature}) do
+  it('processes user entry and adds a definition') do
+    visit('/word_list/Aardvark/definition/new')
+    fill_in("type", :with => "noun")
+    fill_in("meaning", :with => "an animal")
+    click_button('Add Definition')
+    expect(page).to have_content("Success")
+  end
+end

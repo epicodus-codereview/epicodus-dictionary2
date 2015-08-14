@@ -39,7 +39,7 @@ post('/word_list/:word') do
   meaning = params.fetch('meaning')
   @definition = Definition.new(type, meaning)
   @definition.save()
-  @word = Word.find(params.fetch('word'))
+  @word = Word.find(params.fetch('which_word'))
   @word.add_definition(@definition)
   erb(:success)
 end
