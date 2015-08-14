@@ -20,3 +20,12 @@ describe('path to add a new word', {:type => :feature}) do
     expect(page).to have_content("Add a Word Here:")
   end
 end
+
+describe('path for new word form', {:type => :feature}) do
+  it('processes user entry and adds a word') do
+    visit('/word_list/new')
+    fill_in("word", :with => "Aardvark")
+    click_button('Add Word')
+    expect(page).to have_content("Success")
+  end
+end

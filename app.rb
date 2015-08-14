@@ -17,6 +17,9 @@ get('/word_list') do
   erb(:word_list)
 end
 
-# get('/') do
-#
-# end
+post('/word_list') do
+  word = params.fetch('word')
+  Word.new(word).save()
+  @words = Word.all()
+  erb(:success)
+end
