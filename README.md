@@ -1,3 +1,7 @@
+If there seems to be inconsistencies in git commits or anything else, I'd be happy to explain in detail.
+In short, my laptop began to fail in the middle of the code review. I was able to push what I had already committed, but some things were lost. What you have before you is a clone and continuation of the original.
+
+
 # Dictionary
 
 ##### Object oriented Ruby code review for Epicodus, 8/14/2015
@@ -16,7 +20,7 @@ or
 
 Visit:
 
-
+https://young-caverns-4868.herokuapp.com/
 
 to try out the app!
 
