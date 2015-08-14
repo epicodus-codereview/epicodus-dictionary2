@@ -10,7 +10,7 @@
 
 ## Setup
 
--git clone at GitHub:
+-git clone at GitHub: https://github.com/BeeHam/epicodus-dictionary2.git
 
 or
 
