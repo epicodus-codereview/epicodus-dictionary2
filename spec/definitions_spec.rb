@@ -21,25 +21,25 @@ describe(Definition) do
     end
   end
 
-  describe('.all') do
-    it('is empty at first') do
-      expect(Definition.all()).to(eq([]))
-    end
-  end
+  # describe('.all') do
+  #   it('is empty at first') do
+  #     expect(Definition.all()).to(eq([]))
+  #   end
+  # end
 
-  describe('#save') do
-    it("adds a definition to the array of saved definitions") do
-      test_definition = Definition.new("noun", "an animal")
-      test_definition.save()
-      expect(Definition.all()).to(eq([test_definition]))
-    end
-  end
+  # describe('#save') do
+  #   it("adds a definition to the array of saved definitions") do
+  #     test_definition = Definition.new("noun", "an animal")
+  #     test_definition.save()
+  #     expect(Definition.all()).to(eq([test_definition]))
+  #   end
+  # end
 
-  describe(".clear") do
-    it("empties out all of the saved definitions") do
-      Definition.new("noun","an animal").save()
-      Definition.clear()
-      expect(Definition.all()).to(eq([]))
-    end
-  end
+  # describe(".clear") do
+  #   it("empties out all of the saved definitions") do
+  #     Definition.new("noun","an animal").save()
+  #     Definition.clear()
+  #     expect(Definition.all()).to(eq([]))
+  #   end
+  # end
 end
